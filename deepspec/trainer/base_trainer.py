@@ -143,7 +143,7 @@ def _launch_eval(
     tensorboard_dir: str,
     exp_name: str,
 ) -> None:
-    print("You can use this function to launch to your auto eval script!")
+    print("You can use this function to launch your auto eval script!")
 
 class BaseTrainer:
     data_collator_cls = None
