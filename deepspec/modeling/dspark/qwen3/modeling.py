@@ -24,7 +24,6 @@ from deepspec.modeling.dspark.common import (
     create_dspark_attention_mask,
     create_noise_embed,
     create_position_ids,
-    extract_context_feature,
     log_sampler_stats,
     sample_anchor_positions,
 )
