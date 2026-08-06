@@ -1,0 +1,11 @@
+# DSpark / EAGLE3 speculative-decoding training + eval. Every runnable path here
+# needs torch 2.9 + CUDA and a model checkpoint, which is a GPU node's job, not a
+# build runner's — so this gate does not pretend to train anything.
+#
+# What it does prove, over all 73 files including every config/*.py: the tree
+# still parses. That is the failure this repo actually ships — a config or a
+# trainer edited into a syntax error is invisible until a multi-hour job dies on
+# import. compileall catches it in seconds and fails the build.
+test:
+  - name: compile
+    run: python3 -m compileall -q -f . && echo "all python sources compile"
